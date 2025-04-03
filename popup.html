@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .module {
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    .module-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #8BA888;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      background-color: #8BA888;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #7A9777;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 8px;
+      color: #666;
+      background-color: #fff;
+      border-radius: 4px;
+      min-height: 20px;
+      max-height: 200px;
+      overflow: auto;
+    }
+    .input-group {
+      margin: 10px 0;
+    }
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="module">
+    <div class="module-title">通用设置</div>
+    <div class="input-group">
+      <label for="contentClass">内容元素类名：</label>
+      <input type="text" id="contentClass" placeholder="例如：article-content">
+    </div>
+  </div>
+
+  <div class="module">
+    <div class="module-title">单页抓取</div>
+    <button id="captureBtn">抓取并保存为Markdown</button>
+    <div id="status" class="status"></div>
+  </div>
+
+  <div class="module">
+    <div class="module-title">批量抓取</div>
+    <div class="input-group">
+      <label for="nextButtonClass">下一页按钮类名：</label>
+      <input type="text" id="nextButtonClass" placeholder="例如：next-page">
+    </div>
+    <button id="captureAllBtn">抓取所有页面</button>
+    <div id="statusAll" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
